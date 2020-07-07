@@ -1,0 +1,12 @@
+package br.com.alvoradatec.campominado;
+
+import br.com.alvoradatec.campominado.modelo.Tabuleiro;
+import br.com.alvoradatec.campominado.visao.TabuleiroConsole;
+
+public class Aplicacao {
+    public static void main(String[] args) {
+
+        Tabuleiro tabuleiro = new Tabuleiro(6, 6, 3);
+        new TabuleiroConsole(tabuleiro);
+    }
+}

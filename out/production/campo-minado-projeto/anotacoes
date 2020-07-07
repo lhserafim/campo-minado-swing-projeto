@@ -1,0 +1,28 @@
+1. JUnit
+    1.1. Para criar os testes, foram necessários 2 passos
+        1.1.1. Adicionar um novo "source folder", conforme orientado: https://www.jetbrains.com/help/idea/content-roots.html#folder-categories
+        1.1.2. Adicionar as bibliotecas do JUnit, conforme orientado: https://www.jetbrains.com/help/idea/configuring-testing-libraries.html
+    1.2. Sinais que o setup funcionou
+        1.2.1. O diretório "source folder" test é de cor verde e ficou fora do src
+        1.2.2. As bibliotecas do JUnit ficaram em External Libraries
+        1.2.3. Ao tentra criar uma classe de teste, o sistema joga automaticamente dentro da test (verde)
+    1.3. Na classe desejada (ex.: Campo), clicar no nome da classe ir em context actions -> create test
+        1.3.1. O IntelliJ irá criar uma classe de teste, dentro do diretório test
+        1.3.2. Dentro da classe criada, colocar as anotações necessárias: @BeforeEach, @Test
+            Ex.:
+                    private Campo campo;
+
+                    @BeforeEach // É usado para indicar que o método abaixo, será usado antes de qualquer um dos outros métodos
+                    void iniciarCampo() {
+                        campo = new Campo(3, 3);
+                    }
+
+                    @Test
+                    void adicionarVizinho() {
+                        Campo vizinho = new Campo(3, 2);
+                        boolean resultado = campo.adicionarVizinho(vizinho);
+                        assertTrue(resultado);
+                    }
+        1.3.3. É possível criar diversos testes diferentes para o mesmo método
+        1.3.4. assertTrue e assertFalse, são métodos que validam o retorno da execução do método
+    1.4. Cobertura de testes
