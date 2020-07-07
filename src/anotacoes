@@ -26,3 +26,7 @@
         1.3.3. É possível criar diversos testes diferentes para o mesmo método
         1.3.4. assertTrue e assertFalse, são métodos que validam o retorno da execução do método
     1.4. Cobertura de testes
+2. To do e Fix me
+    2.1. Quando você implementa as palavras, to do ou fix me (juntas), faz com que a IDE crie uma lista
+         de to do's para que você não precise deixar comentários no seu código
+    2.2. A lista pode ser acessada na barra rodapé de atalhos do IntelliJ

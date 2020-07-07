@@ -1,7 +1,5 @@
 package br.com.alvoradatec.campominado.modelo;
 
-import br.com.alvoradatec.campominado.excecao.ExplosaoException;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -51,7 +49,8 @@ public class Campo {
             aberto = true;
 
             if(minado) {
-                throw new ExplosaoException();
+                // TODO Implementar nova versão
+                // FIXME Arrumar
             }
 
             if(vizinhancaSegura()) {
@@ -114,20 +113,6 @@ public class Campo {
         aberto = false;
         minado = false;
         marcado = false;
-    }
-
-    public String toString() {
-        if(marcado) {
-            return "x";
-        } else if(aberto && minado) {
-            return "*";
-        } else if(aberto && minasNaVizinhanca() > 0) {
-            return Long.toString(minasNaVizinhanca());
-        } else if(aberto) {
-            return " ";
-        } else {
-            return "?";
-        }
     }
 
 }
